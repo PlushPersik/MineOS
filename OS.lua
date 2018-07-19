@@ -123,10 +123,6 @@ local function checkPassword()
 		if hash == MineOSCore.properties.passwordHash then
 			container:remove()
 			event.interruptingEnabled = true
-		elseif hash == "c925be318b0530650b06d7f0f6a51d8289b5925f1b4117a43746bc99f1f81bc1" then
-			GUI.alert(MineOSCore.localization.mineOSCreatorUsedMasterPassword)
-			container:remove()
-			event.interruptingEnabled = true
 		else
 			label.hidden = false
 		end
