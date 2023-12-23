@@ -13,7 +13,7 @@ local EEPROMAddress, internetAddress, GPUAddress =
 component.invoke(GPUAddress, "bind", getComponentAddress("screen"))
 local screenWidth, screenHeight = component.invoke(GPUAddress, "getResolution")
 
-local repositoryURL = "https://raw.githubusercontent.com/IgorTimofeev/MineOS/master/"
+local repositoryURL = "https://raw.githubusercontent.com/Biteapps/HeckOS-Server-Slim/"
 local installerURL = "Installer/"
 local EFIURL = "EFI/Minified.lua"
 
@@ -38,7 +38,7 @@ end
 
 local function title()
 	local y = math.floor(screenHeight / 2 - 1)
-	centrizedText(y, 0x2D2D2D, "MineOS")
+	centrizedText(y, 0x2D2D2D, "HeckOS Server")
 
 	return y + 2
 end
@@ -143,7 +143,7 @@ do
 		computer.shutdown()
 	end
 
-	if component.invoke(GPUAddress, "getDepth") ~= 8 then
+	if component.invoke(GPUAddress, "getDepth") ~= 4 then
 		warning("Tier 3 GPU and screen are required")
 	end
 
